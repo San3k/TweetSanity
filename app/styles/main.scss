@@ -1,0 +1,48 @@
+.forms {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 20px;
+
+  justify-content: center;
+  align-items: center;
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__input {
+    margin-right: 5px;
+  }
+}
+
+.cards {
+  display: flex;
+
+  justify-content: center;
+  flex-flow: row wrap;
+
+  &__card:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__content {
+    display: flex;
+
+    justify-content: space-between;
+  }
+}
+
+.ui.card:first-child {
+  margin-top: 1em;
+}
+
+.ui.card:last-child {
+  margin-bottom: 1em;
+}

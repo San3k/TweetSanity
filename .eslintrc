@@ -1,0 +1,36 @@
+{
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "plugin:import/errors", "plugin:import/warnings"],
+  "plugins": ["react", "import"],
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "rules": {
+    "no-unused-vars": 0,
+    "max-len": [
+      1,
+      120,
+      2,
+      {
+        "ignoreComments": true
+      }
+    ],
+    "global-require": 0,
+    "import/no-extraneous-dependencies": 0,
+    "no-console": 0,
+    "react/prop-types": 0,
+    "no-useless-escape": 0,
+    "no-param-reassign": 0
+  }
+}
