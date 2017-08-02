@@ -44,11 +44,7 @@ class App extends Component {
       name = this.state.nickname.split(' ').join(',');
     }
     fetch(`http://localhost:3000/api/tweets?id=${name}`).then(res => res.json()).then((res) => {
-      if (name.length === 2 && name[1] === ' ') {
-        this.setState({ info: [...this.state.info, ...res[0]] });
-      } else {
-        this.setState({ info: [...this.state.info, ...res[0]] });
-      }
+      this.setState({ info: [...this.state.info, ...res[0]] });
       this.setState({ tweets: [...this.state.tweets, ...res[1]].sort((a, b) => b.id - a.id) });
       this.setState({ loading: !this.state.loading });
     });
