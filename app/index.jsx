@@ -9,7 +9,12 @@ import App from './App';
 const app = document.getElementById('root');
 
 const renderer = (Root) => {
-  render(<AppContainer><Root /></AppContainer>, app);
+  render(
+    <AppContainer>
+      <Root />
+    </AppContainer>,
+    app,
+  );
 };
 
 renderer(App);

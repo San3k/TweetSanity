@@ -20,7 +20,7 @@ app.get('/api/tweets', (req, res) => {
         screen_name: item,
         include_rts: true,
         exclude_replies: false,
-        count: 10,
+        count: 200,
       };
       return client.get('statuses/user_timeline', params);
     });
