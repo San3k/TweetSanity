@@ -37,12 +37,7 @@ class App extends Component {
     e.preventDefault();
     this.setState({ counter: [] });
     this.setState({ loading: !this.state.loading });
-    let name = this.state.nickname;
-    if (name === '' || name === ' ') {
-      name = this.state.info.map(item => item.screen_name);
-    } else {
-      name = this.state.nickname.split(' ').join(',');
-    }
+    const name = this.state.nickname.split(' ').filter(item => item !== '').join(',');
     fetch(`http://localhost:3000/api/tweets?id=${name}`).then(res => res.json()).then((res) => {
       this.setState({ info: [...this.state.info, ...res[0]] });
       this.setState({ tweets: [...this.state.tweets, ...res[1]].sort((a, b) => b.id - a.id) });
